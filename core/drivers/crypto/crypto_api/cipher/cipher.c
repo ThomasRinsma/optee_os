@@ -80,7 +80,7 @@ static TEE_Result cipher_init(struct crypto_cipher_ctx *ctx,
 	if ((!key1 && key1_len) || (!key2 && key2_len) || (!iv && iv_len)) {
 		CRYPTO_TRACE("One of the key is not correct");
 		CRYPTO_TRACE("key1 @%p-%zu bytes", key1, key1_len);
-		CRYPTO_TRACE("key2 @%p-%zu bytes", key1, key1_len);
+		CRYPTO_TRACE("key2 @%p-%zu bytes", key2, key2_len);
 		CRYPTO_TRACE("iv   @%p-%zu bytes", iv, iv_len);
 		return TEE_ERROR_BAD_PARAMETERS;
 	}
